@@ -479,6 +479,16 @@ func run(s settings) error {
 			fmt.Fprintf(os.Stderr, "  skip %-30s no display.sh section\n", filepath.Base(f))
 			continue
 		}
+		// freeze clips rather than wraps: 14px JetBrains Mono advances 8.4px
+		// per character, inside 20px of padding on each side.
+		if limit := int((s.width - 40) / 8.4); limit > 0 {
+			for i, line := range strings.Split(display, "\n") {
+				if n := len([]rune(line)); n > limit {
+					fmt.Fprintf(os.Stderr, "  warn: %s display.sh:%d is %d characters; lines over %d are cut off\n",
+						filepath.Base(f), i+1, n, limit)
+				}
+			}
+		}
 		abs := filepath.Join(s.root, filepath.FromSlash(docFile))
 		byFile[abs] = append(byFile[abs], injection{
 			id:      id,

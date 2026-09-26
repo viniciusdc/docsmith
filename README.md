@@ -197,13 +197,13 @@ The sample CLI's reference is generated into [docs/CLI.md](docs/CLI.md).
 ```
 Makefile          Docs, test and lint targets
 cmd/              Executable entry points
-  hello/          Hello is the sample CLI that ships with the docsmith template
+  hello/          hello is the sample CLI that ships with the docsmith template
 docs/             Generated reference docs and their assets
   diagrams/       Diagram sources (TOML) for gendiagram
 docsmith.toml     Configuration for every generator
 go.mod            Module definition
 internal/         Packages private to this module
-  textstat/       Textstat counts the lines, words and bytes in a stream of text
+  textstat/       textstat counts the lines, words and bytes in a stream of text
   tools/          Documentation generators, run through make
     genbanner/    Generates the README banner SVGs from docsmith.toml
     gendiagram/   Generates architecture diagram SVGs from TOML definitions

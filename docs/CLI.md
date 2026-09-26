@@ -22,7 +22,7 @@ Global flags, accepted by every command: `-u/--upper`
 Count lines, words and bytes, like wc
 
 ```sh
-hello count <file|->... [flags]
+hello count <file|->...
 ```
 
 ```sh

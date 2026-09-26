@@ -104,9 +104,9 @@ func TestReplaceSection(t *testing.T) {
 
 func TestSynopsis(t *testing.T) {
 	cases := map[string]string{
-		"Package store provides a database. More text.": "Store provides a database",
+		"Package store provides a database. More text.": "store provides a database",
 		"Package main generates banners.":               "Generates banners",
-		"Command tool converts files.":                  "Tool converts files",
+		"Command tool converts files.":                  "tool converts files",
 	}
 	for in, want := range cases {
 		pkg := "store"

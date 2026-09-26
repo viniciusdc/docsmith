@@ -510,8 +510,9 @@ func writeCommand(b *bytes.Buffer, n *cmdNode, name string) {
 	}
 }
 
-// writeUsage prints the usage line(s), appending a compact flag summary when
-// cobra only shows "[flags]".
+// writeUsage prints the usage line(s), replacing cobra's "[flags]" with the
+// flags themselves when there are few of them, or dropping it when there are
+// none.
 func writeUsage(b *bytes.Buffer, n *cmdNode) {
 	if len(n.help.usages) == 0 {
 		return
@@ -522,8 +523,13 @@ func writeUsage(b *bytes.Buffer, n *cmdNode) {
 	}
 	b.WriteString("```sh\n")
 	for _, u := range n.help.usages {
-		if len(compact) > 0 && len(compact) <= 4 && strings.HasSuffix(u, "[flags]") {
-			u = strings.TrimSuffix(u, "[flags]") + strings.Join(compact, " ")
+		if rest, ok := strings.CutSuffix(u, " [flags]"); ok {
+			switch {
+			case len(compact) == 0:
+				u = rest // only --help, which every command has
+			case len(compact) <= 4:
+				u = rest + " " + strings.Join(compact, " ")
+			}
 		}
 		b.WriteString(u + "\n")
 	}
@@ -676,8 +682,8 @@ func pkgDoc(dir string) string {
 }
 
 // synopsis trims a package comment to its first sentence, drops the
-// conventional "Package x" / "Command x" prefix, and caps the length, so
-// "Package store provides a database." becomes "Store provides a database".
+// conventional "Package" / "Command" prefix, and caps the length, so
+// "Package store provides a database." becomes "store provides a database".
 func synopsis(text, pkg string) string {
 	joined := strings.Join(strings.Fields(text), " ")
 	if i := strings.Index(joined, ". "); i >= 0 {
@@ -686,12 +692,14 @@ func synopsis(text, pkg string) string {
 	joined = strings.TrimSuffix(joined, ".")
 	switch {
 	case strings.HasPrefix(joined, "Package main "):
+		// "Package main generates x" reads best as "Generates x".
 		joined = strings.TrimPrefix(joined, "Package main ")
+		if r := []rune(joined); len(r) > 0 {
+			joined = strings.ToUpper(string(r[0])) + string(r[1:])
+		}
 	case strings.HasPrefix(joined, "Package "), strings.HasPrefix(joined, "Command "):
+		// Keep the identifier as written: "store provides a database".
 		_, joined, _ = strings.Cut(joined, " ")
-	}
-	if r := []rune(joined); len(r) > 0 {
-		joined = strings.ToUpper(string(r[0])) + string(r[1:])
 	}
 	const max = 72
 	if r := []rune(joined); len(r) > max {
