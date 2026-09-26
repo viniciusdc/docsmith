@@ -1,0 +1,16 @@
+# Binaries
+*.exe
+*.test
+*.out
+/bin/
+/dist/
+
+# Coverage
+coverage.*
+*.coverprofile
+
+# Go workspace
+go.work
+go.work.sum
+
+.env

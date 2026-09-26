@@ -1,0 +1,12 @@
+docsmith
+Copyright 2026 Vinicius Cerutti
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+The documentation generators in internal/tools/ grew out of the ones in
+tempo (https://github.com/viniciusdc/tempo), by the same author.
+
+The terminal screenshots rendered by internal/tools/genexamples are produced
+with freeze (https://github.com/charmbracelet/freeze, MIT License), which
+embeds the JetBrains Mono font (https://github.com/JetBrains/JetBrainsMono,
+SIL Open Font License 1.1) in every generated SVG.

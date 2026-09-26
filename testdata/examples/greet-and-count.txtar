@@ -1,0 +1,27 @@
+# doc:id     greet-and-count
+# doc:file   README.md
+# doc:tested true
+
+# The script below is what CI runs; display.sh is what the docs show.
+exec hello greet
+stdout '^Hello, world!$'
+
+exec hello greet Ada --greeting Hi
+stdout '^Hi, Ada!$'
+
+exec hello count notes.txt
+stdout '^\s+3\s+7\s+49 notes.txt$'
+
+! exec hello count missing.txt
+stderr 'no such file'
+
+-- notes.txt --
+generated docs
+tested examples
+never stale again
+-- display.sh --
+hello greet Ada --greeting Hi
+# Hi, Ada!
+
+hello count notes.txt
+#      3      7     49 notes.txt

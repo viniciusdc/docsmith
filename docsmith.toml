@@ -1,0 +1,81 @@
+# docsmith.toml — the one file that drives every generator in internal/tools/.
+#
+# Paths are relative to the directory holding this file (the repository root).
+# Every key has a default; delete what you do not need to change.
+
+[project]
+name    = "docsmith"
+tagline = "README banners, diagrams, CLI reference and tested examples for Go CLIs"
+binary  = "hello"          # the executable your users run
+main    = "./cmd/hello"    # package passed to `go build` by gendocs
+
+# ── Banner (internal/tools/genbanner) ────────────────────────────────────────
+# Writes <output_dir>/banner-dark.svg and banner-light.svg.
+[banner]
+title      = "docsmith"
+subtitle   = "docs that are generated, tested and never stale"
+output_dir = "docs/assets"
+# Right-hand motif: "blocks" (stacked rows of rounded blocks) or "lanes"
+# (parallel lanes with arrows, and connectors that shift between them).
+motif      = "blocks"
+
+# Colours per theme. `accent` draws the title underline and glow; `palette`
+# feeds the motif, one colour per row or lane (cycled when there are more).
+[banner.dark]
+accent  = "#58a6ff"
+palette = ["#58a6ff", "#3fb950", "#f0883e", "#bc8cff", "#2ea6a6"]
+
+[banner.light]
+accent  = "#0969da"
+palette = ["#0969da", "#1a7f37", "#bc4c00", "#8250df", "#1b7c83"]
+
+# Optional motif geometry. Leave these out to get the built-in shapes.
+#
+# blocks: one [[banner.rows]] per row, top to bottom; each block is
+#         [x, width, opacity] in pixels from the left edge of the motif.
+# [[banner.rows]]
+# blocks = [[0, 130, 0.90], [145, 72, 0.60], [232, 105, 0.75]]
+#
+# lanes:  `lanes` sets how many lanes to draw, and each [[banner.shifts]]
+#         bends a connector from lane `from` to lane `to` starting at `x`.
+# lanes = 5
+# [[banner.shifts]]
+# from = 0
+# to   = 2
+# x    = 90
+
+# ── Diagrams (internal/tools/gendiagram) ─────────────────────────────────────
+# Every <source_dir>/NAME.toml becomes <output_dir>/NAME-dark.svg and NAME-light.svg.
+[diagrams]
+source_dir = "docs/diagrams"
+output_dir = "docs/assets/diagrams"
+
+# ── Tested examples (internal/tools/genexamples) ─────────────────────────────
+# Every <dir>/*.txtar with `# doc:id` and `# doc:file` headers is rendered with
+# freeze into <svg_dir>/ID-dark.svg and ID-light.svg and injected between
+# <!-- gendocs:example:ID --> markers in the named file.
+[examples]
+dir     = "testdata/examples"
+svg_dir = "docs/assets/examples"
+width   = 760               # freeze canvas width in pixels
+
+# ── Generated docs (internal/tools/gendocs) ──────────────────────────────────
+[docs]
+cli_file    = "docs/CLI.md" # gets the command reference at <!-- gendocs:cli -->
+layout_file = "README.md"   # gets the project tree at <!-- gendocs:layout -->
+
+[docs.layout]
+root_files = ["Makefile", "docsmith.toml", "go.mod"]
+skip       = ["testdata", "vendor", "dist", "bin", "node_modules", "assets"]
+max_depth  = 3
+
+# Descriptions for entries that have no Go package doc to read from.
+[docs.layout.annotations]
+"Makefile"       = "Docs, test and lint targets"
+"docsmith.toml"  = "Configuration for every generator"
+"go.mod"         = "Module definition"
+"cmd"            = "Executable entry points"
+"docs"           = "Generated reference docs and their assets"
+"docs/diagrams"  = "Diagram sources (TOML) for gendiagram"
+"internal"       = "Packages private to this module"
+"internal/tools" = "Documentation generators, run through make"

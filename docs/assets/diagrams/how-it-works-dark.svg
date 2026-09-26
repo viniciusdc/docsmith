@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="528" viewBox="0 0 800 528">
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#484f58"/>
+    </marker>
+    <marker id="arr-d" markerWidth="7" markerHeight="7" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L7,2.5 z" fill="#30363d"/>
+    </marker>
+    <pattern id="dots-d" patternUnits="userSpaceOnUse" width="9" height="9">
+      <circle cx="4.5" cy="4.5" r="1" fill="#f0883e" opacity="0.18"/>
+    </pattern>
+    <pattern id="dots-l" patternUnits="userSpaceOnUse" width="9" height="9">
+      <circle cx="4.5" cy="4.5" r="1" fill="#f0883e" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <g transform="scale(1.6)">
+  <rect width="500" height="330" fill="#0d1117" rx="10"/>
+  <text x="22.0" y="24.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#e6edf3">docsmith — inputs, generators, outputs</text>
+  <rect x="8.0" y="40.0" width="140.0" height="272.0" fill="#161b22" stroke="#21262d" stroke-width="1" rx="8" opacity="0.85"/>
+  <text x="22.0" y="54.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">Inputs</text>
+  <rect x="356.0" y="40.0" width="128.0" height="272.0" fill="#161b22" stroke="#21262d" stroke-width="1" rx="8" opacity="0.85"/>
+  <text x="370.0" y="54.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10" fill="#8b949e">Outputs</text>
+  <path d="M134.0,85.0 C201.0,85.0 134.0,85.0 201.0,85.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M134.0,125.0 C201.0,124.8 134.0,145.2 201.0,145.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M134.0,165.0 C201.0,165.2 134.0,144.8 201.0,145.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M134.0,205.0 C201.0,205.0 134.0,205.0 201.0,205.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M134.0,205.0 C201.0,204.6 134.0,245.4 201.0,245.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M134.0,285.0 C201.0,285.0 134.0,285.0 201.0,285.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M300.0,85.0 C367.0,85.0 300.0,85.0 367.0,85.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M300.0,145.0 C367.0,145.2 300.0,124.8 367.0,125.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M300.0,145.0 C367.0,144.8 300.0,165.2 367.0,165.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M300.0,205.0 C367.0,205.0 300.0,205.0 367.0,205.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="333.5" y="200.0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">freeze</text>
+  <path d="M300.0,245.0 C367.0,245.0 300.0,245.0 367.0,245.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M300.0,285.0 C367.0,285.0 300.0,285.0 367.0,285.0" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="22.0" y="70.0" width="112.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="78.0" y="88.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">DOCSMITH.TOML</text>
+  <rect x="22.0" y="110.0" width="112.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="78.0" y="128.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">CLI --HELP</text>
+  <rect x="22.0" y="150.0" width="112.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="78.0" y="168.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">PACKAGE DOCS</text>
+  <rect x="22.0" y="190.0" width="112.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="78.0" y="208.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">*.TXTAR</text>
+  <rect x="22.0" y="270.0" width="112.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="78.0" y="288.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">DIAGRAMS/*.TOML</text>
+  <rect x="204.0" y="70.0" width="96.0" height="30.0" fill="#2d1a08" stroke="#f0883e" stroke-width="1.5" rx="14"/>
+  <rect x="204.0" y="70.0" width="96.0" height="30.0" fill="url(#dots-d)" rx="14"/>
+  <text x="252.0" y="88.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#f0883e" text-anchor="middle" letter-spacing="0.6">GENBANNER</text>
+  <rect x="204.0" y="130.0" width="96.0" height="30.0" fill="#2d1a08" stroke="#f0883e" stroke-width="1.5" rx="14"/>
+  <rect x="204.0" y="130.0" width="96.0" height="30.0" fill="url(#dots-d)" rx="14"/>
+  <text x="252.0" y="148.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#f0883e" text-anchor="middle" letter-spacing="0.6">GENDOCS</text>
+  <rect x="204.0" y="190.0" width="96.0" height="30.0" fill="#2d1a08" stroke="#f0883e" stroke-width="1.5" rx="14"/>
+  <rect x="204.0" y="190.0" width="96.0" height="30.0" fill="url(#dots-d)" rx="14"/>
+  <text x="252.0" y="208.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#f0883e" text-anchor="middle" letter-spacing="0.6">GENEXAMPLES</text>
+  <rect x="204.0" y="230.0" width="96.0" height="30.0" fill="#2d1a08" stroke="#f0883e" stroke-width="1.5" rx="14"/>
+  <rect x="204.0" y="230.0" width="96.0" height="30.0" fill="url(#dots-d)" rx="14"/>
+  <text x="252.0" y="248.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#f0883e" text-anchor="middle" letter-spacing="0.6">TESTSCRIPT</text>
+  <rect x="204.0" y="270.0" width="96.0" height="30.0" fill="#2d1a08" stroke="#f0883e" stroke-width="1.5" rx="14"/>
+  <rect x="204.0" y="270.0" width="96.0" height="30.0" fill="url(#dots-d)" rx="14"/>
+  <text x="252.0" y="288.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#f0883e" text-anchor="middle" letter-spacing="0.6">GENDIAGRAM</text>
+  <rect x="370.0" y="70.0" width="100.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="420.0" y="88.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">BANNER SVG</text>
+  <rect x="370.0" y="110.0" width="100.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="420.0" y="128.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">CLI.MD</text>
+  <rect x="370.0" y="150.0" width="100.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="420.0" y="168.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">README LAYOUT</text>
+  <rect x="370.0" y="190.0" width="100.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="420.0" y="208.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">EXAMPLE SVG</text>
+  <rect x="370.0" y="230.0" width="100.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="420.0" y="248.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">GO TEST</text>
+  <rect x="370.0" y="270.0" width="100.0" height="30.0" fill="#161b22" stroke="#30363d" stroke-width="1" rx="14"/>
+  <text x="420.0" y="288.5" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#c9d1d9" text-anchor="middle" letter-spacing="0.4">DIAGRAM SVG</text>
+  </g>
+</svg>

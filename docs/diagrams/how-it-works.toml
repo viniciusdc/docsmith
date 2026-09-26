@@ -1,0 +1,196 @@
+# How docsmith turns repository inputs into generated docs.
+# Rendered by internal/tools/gendiagram into docs/assets/diagrams/.
+#
+# Explicit layout: width/height are set, so every node carries its own x/y.
+# Rows sit 40px apart; each generator lines up with the output it writes.
+
+title  = "docsmith — inputs, generators, outputs"
+width  = 500
+height = 330
+scale  = 1.6
+
+# ── Inputs ───────────────────────────────────────────────────────────────────
+
+[[nodes]]
+id = "config"
+label = "DOCSMITH.TOML"
+style = "source"
+x = 22
+y = 70
+
+[[nodes]]
+id = "help"
+label = "CLI --HELP"
+style = "source"
+x = 22
+y = 110
+
+[[nodes]]
+id = "pkgdoc"
+label = "PACKAGE DOCS"
+style = "source"
+x = 22
+y = 150
+
+[[nodes]]
+id = "txtar"
+label = "*.TXTAR"
+style = "source"
+x = 22
+y = 190
+
+[[nodes]]
+id = "diagrams"
+label = "DIAGRAMS/*.TOML"
+style = "source"
+x = 22
+y = 270
+
+# ── Generators ───────────────────────────────────────────────────────────────
+
+[[nodes]]
+id = "genbanner"
+label = "GENBANNER"
+style = "stage"
+x = 204
+y = 70
+w = 96
+
+[[nodes]]
+id = "gendocs"
+label = "GENDOCS"
+style = "stage"
+x = 204
+y = 130
+w = 96
+
+[[nodes]]
+id = "genexamples"
+label = "GENEXAMPLES"
+style = "stage"
+x = 204
+y = 190
+w = 96
+
+[[nodes]]
+id = "testscript"
+label = "TESTSCRIPT"
+style = "stage"
+x = 204
+y = 230
+w = 96
+
+[[nodes]]
+id = "gendiagram"
+label = "GENDIAGRAM"
+style = "stage"
+x = 204
+y = 270
+w = 96
+
+# ── Outputs ──────────────────────────────────────────────────────────────────
+
+[[nodes]]
+id = "banner"
+label = "BANNER SVG"
+style = "sink"
+x = 370
+y = 70
+
+[[nodes]]
+id = "climd"
+label = "CLI.MD"
+style = "sink"
+x = 370
+y = 110
+
+[[nodes]]
+id = "layout"
+label = "README LAYOUT"
+style = "sink"
+x = 370
+y = 150
+
+[[nodes]]
+id = "examplesvg"
+label = "EXAMPLE SVG"
+style = "sink"
+x = 370
+y = 190
+
+[[nodes]]
+id = "gotest"
+label = "GO TEST"
+style = "sink"
+x = 370
+y = 230
+
+[[nodes]]
+id = "diagramsvg"
+label = "DIAGRAM SVG"
+style = "sink"
+x = 370
+y = 270
+
+# ── Edges ────────────────────────────────────────────────────────────────────
+
+[[edges]]
+from = "config"
+to = "genbanner"
+
+[[edges]]
+from = "help"
+to = "gendocs"
+
+[[edges]]
+from = "pkgdoc"
+to = "gendocs"
+
+[[edges]]
+from = "txtar"
+to = "genexamples"
+
+[[edges]]
+from = "txtar"
+to = "testscript"
+
+[[edges]]
+from = "diagrams"
+to = "gendiagram"
+
+[[edges]]
+from = "genbanner"
+to = "banner"
+
+[[edges]]
+from = "gendocs"
+to = "climd"
+
+[[edges]]
+from = "gendocs"
+to = "layout"
+
+[[edges]]
+from = "genexamples"
+to = "examplesvg"
+label = "freeze"
+
+[[edges]]
+from = "testscript"
+to = "gotest"
+
+[[edges]]
+from = "gendiagram"
+to = "diagramsvg"
+
+# ── Groups ───────────────────────────────────────────────────────────────────
+
+[[groups]]
+id = "inputs"
+label = "Inputs"
+contains = ["config", "help", "pkgdoc", "txtar", "diagrams"]
+
+[[groups]]
+id = "outputs"
+label = "Outputs"
+contains = ["banner", "climd", "layout", "examplesvg", "gotest", "diagramsvg"]
