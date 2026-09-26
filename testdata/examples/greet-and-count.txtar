@@ -20,8 +20,8 @@ generated docs
 tested examples
 never stale again
 -- display.sh --
-hello greet Ada --greeting Hi
-# Hi, Ada!
+$ hello greet Ada --greeting Hi
+Hi, Ada!
 
-hello count notes.txt
-#      3      7     49 notes.txt
+$ hello count notes.txt
+     3      7     49 notes.txt

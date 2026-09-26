@@ -137,12 +137,14 @@ exec hello greet Ada --greeting Hi
 stdout '^Hi, Ada!$'
 
 -- display.sh --
-hello greet Ada --greeting Hi
-# Hi, Ada!
+$ hello greet Ada --greeting Hi
+Hi, Ada!
 ```
 
-By convention `display.sh` shows output as comments, which freeze renders in
-a muted colour. Rendered SVGs are committed and carry a hash of the snippet
+`display.sh` is a terminal session: lines starting with `$ ` are commands,
+drawn bright, and everything else is output, drawn muted and verbatim. Set
+`# doc:lang bash` (or any language freeze knows) to highlight the snippet as
+code instead. Rendered SVGs are committed and carry a hash of the snippet
 they show; `genexamples` re-renders them when the snippet changes, and
 `genexamples -force` re-renders all of them.
 

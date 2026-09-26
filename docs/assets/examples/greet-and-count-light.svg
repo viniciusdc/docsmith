@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg width="760.00" height="186.00" xmlns="http://www.w3.org/2000/svg">
-<!-- docsmith:sha256:39e82b8bc9ca117c -->
+<!-- docsmith:sha256:55441318722da498 -->
 <style>
 @font-face {
 	font-family: &apos;JetBrains Mono&apos;;
@@ -11,11 +11,7 @@
 }
 </style><rect width="760.00" height="186.00" fill="#f6f8fa" rx="8.00" ry="8.00" x="0.00px" y="0.00px"/><rect x="0.00" y="0.00" width="760.00" height="24.00" rx="8.00" ry="8.00" fill="#eaeef2"/><rect x="0.00" y="16.00" width="760.00" height="8.00" fill="#eaeef2"/><line x1="0.00" y1="24.00" x2="760.00" y2="24.00" stroke="#d0d7de" stroke-width="0.50"/>
 <g font-family="JetBrains Mono" font-size="14.00px" fill="#-00001" clip-path="url(#terminalMask)">
-<text x="20.00px" y="51.80px" xml:space="preserve">hello greet Ada --greeting Hi
-</text><text x="20.00px" y="68.60px" xml:space="preserve"><tspan fill="#57606a"># Hi, Ada!</tspan>
-</text><text x="20.00px" y="85.40px" xml:space="preserve">
-</text><text x="20.00px" y="102.20px" xml:space="preserve">hello count notes.txt
-</text><text x="20.00px" y="119.00px" xml:space="preserve"><tspan fill="#57606a">#      3      7     49 notes.txt</tspan></text>
+<text x="20.00px" y="51.80px" xml:space="preserve"><tspan xml:space="preserve" fill="#57606a">$ </tspan><tspan xml:space="preserve" fill="#1f2328">hello greet Ada --greeting Hi</tspan><tspan xml:space="preserve"/></text><text x="20.00px" y="68.60px" xml:space="preserve"><tspan xml:space="preserve" fill="#57606a">Hi, Ada!</tspan><tspan xml:space="preserve"/></text><text x="20.00px" y="85.40px" xml:space="preserve"/><text x="20.00px" y="102.20px" xml:space="preserve"><tspan xml:space="preserve" fill="#57606a">$ </tspan><tspan xml:space="preserve" fill="#1f2328">hello count notes.txt</tspan><tspan xml:space="preserve"/></text><text x="20.00px" y="119.00px" xml:space="preserve"><tspan xml:space="preserve" fill="#57606a">     3      7     49 notes.txt</tspan><tspan xml:space="preserve"/></text>
 </g>
 <svg x="0.00px" y="0.00px"><circle cx="13.50" cy="12.00" r="5.50" fill="#FF5A54"/><circle cx="32.50" cy="12.00" r="5.50" fill="#E6BF29"/><circle cx="51.50" cy="12.00" r="5.50" fill="#52C12B"/><text x="380.00" y="12.00" font-family="JetBrains Mono" font-size="11" fill="#57606a" text-anchor="middle" dominant-baseline="central">greet and count</text></svg><defs><clipPath id="terminalMask"><rect x="0.00" y="0.00" width="760.00" height="130.00"/></clipPath></defs>
 <line x1="12.00" y1="150.00" x2="748.00" y2="150.00" stroke="#d0d7de" stroke-width="0.50"/>
